@@ -49,11 +49,12 @@ public class Blogg {
 		if (finnes(innlegg) || !ledigPlass()) {
 			return false;
 		}
-		innleggtabell[nesteledig] = innlegg;
+		this.innleggtabell[nesteledig] = innlegg;
 		nesteledig++;
 		return true;
 	}
 	
+	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(nesteledig + "\n");
